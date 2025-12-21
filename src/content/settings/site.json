@@ -1,21 +1,21 @@
 {
-    "siteName": "Cristiane David - Arquitetura de Interiores",
-    "description": "Projetos de arquitetura de interiores que transformam espaços em ambientes únicos e funcionais.",
-    "hero": {
-        "title": "Cristiane David",
-        "subtitle": "Arquitetura de Interiores",
-        "description": "Transformando espaços em ambientes que refletem personalidade, funcionalidade e beleza. Projetos personalizados para residências e estabelecimentos comerciais.",
-        "image": "/images/hero-background.jpg"
-    },
-    "social": {
-        "instagram": "https://instagram.com/cristianedavid",
-        "facebook": "",
-        "linkedin": "",
-        "pinterest": "https://pinterest.com/cristianedavid"
-    },
-    "contact": {
-        "email": "contato@cristianedavid.com",
-        "phone": "(11) 98765-4321",
-        "whatsapp": "5511987654321"
-    }
+  "siteName": "Cristiane David - Arquitetura de Interioress",
+  "description": "Projetos de arquitetura de interiores que transformam espaços em ambientes únicos e funcionais.s",
+  "hero": {
+    "title": "Cristiane Davids",
+    "subtitle": "Arquitetura de Interioress",
+    "description": "Transformando espaços em ambientes que refletem personalidade, funcionalidade e beleza. Projetos personalizados para residências e estabelecimentos comerciais.s",
+    "image": "/images/hero-background.jpg"
+  },
+  "social": {
+    "instagram": "https://instagram.com/cristianedavids",
+    "facebook": "",
+    "linkedin": "",
+    "pinterest": "https://pinterest.com/cristianedavids"
+  },
+  "contact": {
+    "email": "contato@cristianedavid.coms",
+    "phone": "(11) 98765-4321s",
+    "whatsapp": "5511987654321s"
+  }
 }
