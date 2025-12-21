@@ -70,27 +70,6 @@ Os arquivos serão gerados na pasta `dist/`
 npm run preview
 ```
 
-## 📝 Configuração do Decap CMS
-
-### Acesso ao CMS
-
-Após o deploy, acesse: `https://seu-dominio.com/admin/`
-
-### Autenticação
-
-O Decap CMS está configurado para usar **Git Gateway** com **Netlify Identity**. Para configurar:
-
-1. Faça deploy no Netlify
-2. Ative o **Netlify Identity** nas configurações do site
-3. Ative o **Git Gateway** nas configurações do Identity
-4. Convide usuários para acessar o CMS
-
-### Coleções Disponíveis
-
-- **Configurações do Site**: Hero, redes sociais, contato
-- **Projetos**: Portfólio de projetos com imagens e galeria
-- **Serviços**: Descrição dos serviços oferecidos
-
 ## 🎨 Personalização
 
 ### Cores
@@ -108,23 +87,7 @@ colors: {
 ### Conteúdo
 
 Todo o conteúdo pode ser editado através do Decap CMS em `/admin/` ou diretamente nos arquivos markdown em `src/content/`.
-
-## 📦 Deploy
-
-### Netlify (Recomendado)
-
-1. Conecte seu repositório GitHub ao Netlify
-2. Configure o build:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. Ative Netlify Identity
-4. Ative Git Gateway
-
-### Vercel
-
-1. Conecte seu repositório ao Vercel
-2. A configuração será detectada automaticamente
-3. Para o CMS, você precisará configurar OAuth do GitHub manualmente
+Para acessar localmente, rode `npx decap-server` na pasta raiz junto com o `npm run dev`.
 
 ## 🔄 Workflow de Atualização de Conteúdo
 
