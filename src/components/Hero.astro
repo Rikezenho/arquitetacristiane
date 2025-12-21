@@ -1,0 +1,51 @@
+---
+import siteSettings from '../content/settings/site.json';
+
+const { hero } = siteSettings;
+---
+
+<section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100">
+  <div class="absolute inset-0 z-0">
+    {hero.image && (
+      <img 
+        src={hero.image} 
+        alt="Hero background"
+        class="w-full h-full object-cover opacity-20"
+      />
+    )}
+  </div>
+  
+  <div class="container mx-auto px-4 py-20 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight">
+        {hero.title}
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
+        {hero.subtitle}
+      </p>
+      <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+        {hero.description}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/projetos" 
+          class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-semibold shadow-lg"
+        >
+          Ver Projetos
+        </a>
+        <a 
+          href="#contato" 
+          class="px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold shadow-lg border-2 border-primary-600"
+        >
+          Entre em Contato
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
