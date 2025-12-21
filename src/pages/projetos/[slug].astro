@@ -26,7 +26,7 @@ const { Content } = await project.render();
     <header class="mb-8">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">{project.data.title}</h1>
       <div class="flex items-center gap-4 text-gray-600">
-        <time datetime={project.data.date}>
+        <time datetime={project.data.date.toISOString()}>
           {new Date(project.data.date).toLocaleDateString('pt-BR', {
             year: 'numeric',
             month: 'long',
