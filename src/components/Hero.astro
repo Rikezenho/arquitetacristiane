@@ -4,41 +4,46 @@ import siteSettings from '../content/settings/site.json';
 const { hero } = siteSettings;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100">
+<section class="relative min-h-screen flex items-center justify-center">
   <div class="absolute inset-0 z-0">
     {hero.image && (
       <img 
         src={hero.image} 
         alt="Hero background"
-        class="w-full h-full object-cover opacity-20"
+        class="w-full h-full object-cover opacity-15"
       />
     )}
   </div>
   
   <div class="container mx-auto px-4 py-20 relative z-10">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight">
-        {hero.title}
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-        {hero.subtitle}
-      </p>
-      <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-        {hero.description}
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="/projetos" 
-          class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-semibold shadow-lg"
-        >
-          Ver Projetos
-        </a>
-        <a 
-          href="#contato" 
-          class="px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold shadow-lg border-2 border-primary-600"
-        >
-          Entre em Contato
-        </a>
+    <div class="flex text-left align-items-center justify-between">
+      <div class="flex flex-col justify-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight sticky top-4">
+          <a href="/" class="text-2xl font-bold text-primary-600"><img src="/logo.svg" alt={hero.title} /></a>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
+          {hero.subtitle}
+        </p>
+        <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl">
+          {hero.description}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-start">
+          <a 
+            href="/projetos" 
+            class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-semibold shadow-lg"
+          >
+            Ver Projetos
+          </a>
+          <a 
+            href="#contato" 
+            class="px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold shadow-lg border-2 border-primary-600"
+          >
+            Entre em Contato
+          </a>
+        </div>
+      </div>
+      <div class="flex-grow flex justify-center items-center">
+        <img src="/hero-picture.png" alt="" class="hidden md:block" style="min-width: 50%;" />
       </div>
     </div>
   </div>

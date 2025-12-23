@@ -21,10 +21,9 @@ const {
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body class="bg-white text-gray-900">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header class="fixed top-0 left-0 right-0 z-50 py-4">
       <nav class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-          <a href="/" class="text-2xl font-bold text-primary-600">Cristiane David</a>
+        <div class="flex justify-end items-center">
           <ul class="hidden md:flex space-x-8">
             <li><a href="/" class="hover:text-primary-600 transition-colors">Home</a></li>
             <li><a href="/projetos" class="hover:text-primary-600 transition-colors">Projetos</a></li>
@@ -48,7 +47,7 @@ const {
       </nav>
     </header>
 
-    <main class="pt-16">
+    <main>
       <slot />
     </main>
 
