@@ -6,22 +6,24 @@ const { hero } = siteSettings;
 
 <section class="relative min-h-screen flex items-center justify-center">
   <div class="absolute inset-0 z-0">
+    <!-- Subtle white gradient overlay from bottom to top -->
+    <div class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"></div>
     {hero.image && (
       <img 
         src={hero.image} 
         alt="Hero background"
-        class="w-full h-full object-cover opacity-15"
+        class="w-full h-full object-cover opacity-25"
       />
     )}
   </div>
   
-  <div class="container mx-auto px-4 py-20 relative z-10">
-    <div class="flex text-left align-items-center justify-between">
+  <div class="container mx-auto px-4 py-20 relative z-20">
+    <div class="flex text-left align-items-center justify-between gap-10">
       <div class="flex flex-col justify-center">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight sticky top-4">
-          <a href="/" class="text-2xl font-bold text-primary-600"><img src="/logo.svg" alt={hero.title} /></a>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
+          <a href="/" class="text-2xl font-bold text-primary-600"><img src="/logo.svg" alt={hero.title} class="max-w-full" /></a>
         </h1>
-        <p class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
+        <p class="text-xl md:text-2xl text-gray-700 mb-4 font-bold">
           {hero.subtitle}
         </p>
         <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl">
