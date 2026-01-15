@@ -2,18 +2,28 @@
 import siteSettings from '../content/settings/site.json';
 
 const { social, contact } = siteSettings;
+const quoteFormUrl = contact.quoteFormUrl;
 ---
 
 <section id="contato" class="py-20 bg-white">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h2>
+      <h2 class="text-4xl md:text-5xl font-display mb-4 text-primary-700 mb-4">Entre em Contato</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
         Vamos conversar sobre o seu projeto e transformar seus sonhos em realidade
       </p>
     </div>
 
     <div class="max-w-3xl mx-auto text-center">
+      <div class="mb-8">
+        <a 
+          href={quoteFormUrl} 
+          class="inline-block bg-tertiary-600 hover:bg-tertiary-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+        >
+          Solicitar orçamento
+        </a>
+      </div>
+
       <div class="space-y-6">
         {contact.email && (
           <div>
@@ -27,7 +37,7 @@ const { social, contact } = siteSettings;
         {contact.whatsapp && (
           <div>
             <p class="font-semibold">WhatsApp</p>
-            <a href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 text-lg">
+            <a href={`https://wa.me/55${contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 text-lg">
               {contact.whatsapp}
             </a>
           </div>

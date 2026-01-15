@@ -1,5 +1,5 @@
 ---
-import siteSettings from '../content/settings/site.json';
+import siteSettings from "../content/settings/site.json";
 
 const { hero } = siteSettings;
 ---
@@ -7,21 +7,28 @@ const { hero } = siteSettings;
 <section class="relative min-h-screen flex items-center justify-center">
   <div class="absolute inset-0 z-0">
     <!-- Subtle white gradient overlay from bottom to top -->
-    <div class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"></div>
-    {hero.image && (
-      <img 
-        src={hero.image} 
-        alt="Hero background"
-        class="w-full h-full object-cover opacity-15"
-      />
-    )}
+    <div
+      class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"
+    >
+    </div>
+    {
+      hero.image && (
+        <img
+          src={hero.image}
+          alt="Hero background"
+          class="w-full h-full object-cover opacity-15"
+        />
+      )
+    }
   </div>
-  
+
   <div class="container mx-auto px-4 py-20 relative z-20">
     <div class="flex text-left align-items-center justify-between gap-10">
       <div class="flex flex-col justify-center">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-          <a href="/" class="text-2xl font-bold text-primary-600"><img src="/logo.svg" alt={hero.title} class="max-w-full" /></a>
+          <a href="/" class="text-2xl font-bold text-primary-600"
+            ><img src="/logo.svg" alt={hero.title} class="max-w-full" /></a
+          >
         </h1>
         <p class="text-xl md:text-2xl text-gray-700 mb-4 font-bold">
           {hero.subtitle}
@@ -30,29 +37,45 @@ const { hero } = siteSettings;
           {hero.description}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-start">
-          <a 
-            href="/projetos" 
-            class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-semibold shadow-lg"
+          <a
+            href="/projetos"
+            class="px-8 py-4 bg-tertiary-600 text-white rounded-lg hover:bg-tertiary-700 transition-colors font-semibold shadow-lg"
           >
             Ver Projetos
           </a>
-          <a 
-            href="#contato" 
-            class="px-8 py-4 bg-white text-primary-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold shadow-lg border-2 border-primary-600"
+          <a
+            href="#contato"
+            class="px-8 py-4 bg-white text-tertiary-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold shadow-lg border-2 border-tertiary-600"
           >
             Entre em Contato
           </a>
         </div>
       </div>
       <div class="flex-grow flex justify-center items-center">
-        <img src="/hero-picture.png" alt="" class="hidden md:block" style="min-width: 50%;" />
+        <img
+          src="/hero-picture.png"
+          alt=""
+          class="hidden md:block"
+          style="min-width: 50%;"
+        />
       </div>
     </div>
   </div>
 
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+  <div
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <svg
+      class="w-6 h-6 text-primary-600"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
     </svg>
   </div>
 </section>

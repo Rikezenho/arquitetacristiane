@@ -1,4 +1,6 @@
 ---
+import siteSettings from '../content/settings/site.json';
+
 interface Props {
   title?: string;
   description?: string;
@@ -8,6 +10,8 @@ const {
   title = "Cristiane David | Arquitetura de Interiores",
   description = "Projetos de arquitetura de interiores que transformam espaços em ambientes únicos e funcionais."
 } = Astro.props;
+
+const { contact } = siteSettings;
 ---
 
 <!DOCTYPE html>
@@ -58,21 +62,20 @@ const {
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-xl font-bold mb-4">Cristiane David</h3>
-            <p class="text-gray-400">Arquitetura de Interiores</p>
+            <h3 class="text-xl font-bold mb-4"><img src="/logo-footer.svg" alt="Cristiane David" /></h3>
           </div>
           <div>
             <h4 class="font-semibold mb-4">Links</h4>
             <ul class="space-y-2 text-gray-400">
               <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
               <li><a href="/projetos" class="hover:text-white transition-colors">Projetos</a></li>
-              <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
-              <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+              <li><a href="/#servicos" class="hover:text-white transition-colors">Serviços</a></li>
+              <li><a href="/#contato" class="hover:text-white transition-colors">Contato</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-semibold mb-4">Contato</h4>
-            <p class="text-gray-400">contato@cristianedavid.com</p>
+            <p class="text-gray-400">{contact.email}</p>
           </div>
         </div>
         <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
