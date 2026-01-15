@@ -18,7 +18,7 @@ const quoteFormUrl = contact.quoteFormUrl;
       <div class="mb-8">
         <a 
           href={quoteFormUrl} 
-          class="inline-block bg-tertiary-600 hover:bg-tertiary-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+          class="inline-block bg-tertiary-400 hover:bg-tertiary-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
         >
           Solicitar orçamento
         </a>
@@ -28,7 +28,7 @@ const quoteFormUrl = contact.quoteFormUrl;
         {contact.email && (
           <div>
             <p class="font-semibold">Email</p>
-            <a href={`mailto:${contact.email}`} class="text-primary-600 hover:text-primary-700 text-lg">
+            <a href={`mailto:${contact.email}`} class="text-tertiary-400 hover:text-tertiary-600 text-lg">
               {contact.email}
             </a>
           </div>
@@ -37,7 +37,7 @@ const quoteFormUrl = contact.quoteFormUrl;
         {contact.whatsapp && (
           <div>
             <p class="font-semibold">WhatsApp</p>
-            <a href={`https://wa.me/55${contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 text-lg">
+            <a href={`https://wa.me/55${contact.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" class="text-tertiary-400 hover:text-tertiary-600 text-lg">
               {contact.whatsapp}
             </a>
           </div>
