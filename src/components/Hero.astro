@@ -74,18 +74,18 @@ const { hero } = siteSettings;
     </svg>
   </div>
 
-<script>
-  const heroBg = document.getElementById('hero-bg');
-  
-  if (heroBg) {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      // Subtle parallax: move background vertically at 30% of scroll speed
-      const yPos = scrolled * 0.3;
-      heroBg.style.backgroundPosition = `center ${yPos}px`;
-    };
+  <script>
+    const heroBg = document.getElementById('hero-bg');
     
-    window.addEventListener('scroll', handleScroll, { passive: true });
-  }
-</script>
+    if (heroBg) {
+      const handleScroll = () => {
+        const scrolled = window.scrollY;
+        // Subtle parallax: move background vertically at 30% of scroll speed
+        const yPos = scrolled * 0.3;
+        heroBg.style.backgroundPosition = `center ${yPos}px`;
+      };
+      
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+  </script>
 </section>

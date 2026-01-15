@@ -91,4 +91,19 @@ const quoteFormUrl = contact.quoteFormUrl;
       </div>
     </div>
   </div>
+
+  <script>
+    const contactBg = document.getElementById('contact-bg');
+    
+    if (contactBg) {
+      const handleScroll = () => {
+        const scrolled = window.scrollY;
+        // Subtle parallax: move background vertically at 30% of scroll speed
+        const yPos = scrolled * 0.2;
+        contactBg.style.backgroundPosition = `center ${yPos}px`;
+      };
+      
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+  </script>
 </section>
