@@ -6,6 +6,7 @@ order: 1
 ---
 
 Desenvolvimento de projetos personalizados que incluem:
+
 - Levantamento e análise do espaço
 - Desenvolvimento de conceito e estilo
 - Plantas baixas e layouts

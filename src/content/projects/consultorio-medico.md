@@ -19,6 +19,7 @@ Desenvolvimento de ambiente profissional que une funcionalidade médica com conf
 ## Conceito
 
 O projeto foi desenvolvido com foco em:
+
 - Recepção acolhedora e confortável
 - Cores que transmitem tranquilidade
 - Fluxo otimizado entre recepção, consultório e banheiro
@@ -27,11 +28,13 @@ O projeto foi desenvolvido com foco em:
 ## Ambientes
 
 ### Recepção
+
 - Cadeiras ergonômicas para espera
 - Iluminação indireta e aconchegante
 - Painel de parede com elementos naturais
 
 ### Consultório
+
 - Mesa de atendimento funcional
 - Maca médica integrada ao design
 - Armários planejados para materiais e equipamentos

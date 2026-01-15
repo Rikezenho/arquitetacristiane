@@ -6,6 +6,7 @@ order: 6
 ---
 
 Serviço completo de reforma incluindo:
+
 - Planejamento e cronograma
 - Gestão de fornecedores e prestadores
 - Acompanhamento de obra

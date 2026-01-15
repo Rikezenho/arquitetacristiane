@@ -1,53 +1,61 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const allProjects = await getCollection('projects');
-const sortedProjects = allProjects.sort((a, b) => 
-  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+const allProjects = await getCollection("projects");
+const sortedProjects = allProjects.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
 
 <Layout title="Projetos | Cristiane David">
   <section class="container mx-auto px-4 py-16 relative z-20">
-    <h1 class="text-4xl md:text-5xl font-display text-center mb-4 text-primary-600">Projetos</h1>
+    <h1
+      class="text-4xl md:text-5xl font-display text-center mb-4 text-primary-600"
+    >
+      Projetos
+    </h1>
     <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-      Explore nossa coleção de projetos de arquitetura de interiores, 
-      cada um criado com dedicação e atenção aos detalhes.
+      Explore nossa coleção de projetos de arquitetura de interiores, cada um
+      criado com dedicação e atenção aos detalhes.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {sortedProjects.map((project) => (
-        <article class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-          <a href={`/projetos/${project.slug}`}>
-            {project.data.image && (
-              <div class="aspect-[4/3] overflow-hidden">
-                <img 
-                  src={project.data.image} 
-                  alt={project.data.title}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            )}
-            <div class="p-6 bg-white">
-              <h2 class="text-xl font-bold mb-2 group-hover:text-primary-600 transition-colors">
-                {project.data.title}
-              </h2>
-              <p class="text-gray-600 text-sm mb-4">{project.data.description}</p>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500">
-                  {new Date(project.data.date).toLocaleDateString('pt-BR')}
-                </span>
-                {project.data.category && (
-                  <span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">
-                    {project.data.category}
+      {
+        sortedProjects.map((project) => (
+          <article class="group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <a href={`/projetos/${project.slug}`}>
+              {project.data.image && (
+                <div class="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={project.data.image}
+                    alt={project.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div class="p-6 bg-white">
+                <h2 class="text-xl font-bold mb-2 group-hover:text-primary-600 transition-colors">
+                  {project.data.title}
+                </h2>
+                <p class="text-gray-600 text-sm mb-4">
+                  {project.data.description}
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">
+                    {new Date(project.data.date).toLocaleDateString("pt-BR")}
                   </span>
-                )}
+                  {project.data.category && (
+                    <span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">
+                      {project.data.category}
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
-          </a>
-        </article>
-      ))}
+            </a>
+          </article>
+        ))
+      }
     </div>
   </section>
 </Layout>

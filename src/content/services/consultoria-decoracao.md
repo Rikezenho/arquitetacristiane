@@ -6,6 +6,7 @@ order: 2
 ---
 
 Serviço de consultoria que inclui:
+
 - Análise do espaço e necessidades
 - Definição de paleta de cores
 - Orientação para compra de móveis e decoração

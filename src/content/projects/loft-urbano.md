@@ -22,6 +22,7 @@ Transformação de um loft urbano em um espaço funcional e moderno, ideal para 
 ## Soluções
 
 O projeto integrou sala, cozinha e área de trabalho em um único ambiente fluido, utilizando:
+
 - Tijolos aparentes preservados
 - Marcenaria modular inteligente
 - Cama retrátil para otimização de espaço
@@ -30,6 +31,7 @@ O projeto integrou sala, cozinha e área de trabalho em um único ambiente fluid
 ## Estilo
 
 Industrial minimalista com elementos de:
+
 - Estruturas metálicas
 - Concreto aparente
 - Iluminação com trilhos e spots

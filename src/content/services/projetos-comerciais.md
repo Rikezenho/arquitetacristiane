@@ -6,6 +6,7 @@ order: 3
 ---
 
 Projetos para estabelecimentos comerciais:
+
 - Lojas e showrooms
 - Consultórios e clínicas
 - Escritórios corporativos

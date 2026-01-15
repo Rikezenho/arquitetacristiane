@@ -1,20 +1,20 @@
 ---
-import siteSettings from '../content/settings/site.json';
+import siteSettings from "../content/settings/site.json";
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { 
+const {
   title = "Cristiane David | Arquitetura de Interiores",
-  description = "Projetos de arquitetura de interiores que transformam espaços em ambientes únicos e funcionais."
+  description = "Projetos de arquitetura de interiores que transformam espaços em ambientes únicos e funcionais.",
 } = Astro.props;
 
 const { contact } = siteSettings;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -22,33 +22,80 @@ const { contact } = siteSettings;
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script
+      is:inline
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gruppo&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-white text-gray-900">
     <header class="fixed top-0 left-0 right-0 z-50 py-4">
       <nav class="container mx-auto px-4 py-4">
         <div class="flex justify-end items-center">
           <ul class="hidden md:flex space-x-8">
-            <li><a href="/" class="hover:text-primary-600 transition-colors">Home</a></li>
-            <li><a href="/projetos" class="hover:text-primary-600 transition-colors">Projetos</a></li>
-            <li><a href="#servicos" class="hover:text-primary-600 transition-colors">Serviços</a></li>
-            <li><a href="#contato" class="hover:text-primary-600 transition-colors">Contato</a></li>
+            <li>
+              <a href="/" class="hover:text-primary-600 transition-colors"
+                >Home</a>
+            </li>
+            <li>
+              <a
+                href="/projetos"
+                class="hover:text-primary-600 transition-colors">Projetos</a>
+            </li>
+            <li>
+              <a
+                href="#servicos"
+                class="hover:text-primary-600 transition-colors">Serviços</a>
+            </li>
+            <li>
+              <a
+                href="#contato"
+                class="hover:text-primary-600 transition-colors">Contato</a>
+            </li>
           </ul>
           <button id="mobile-menu-btn" class="md:hidden p-2">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
           <ul class="flex flex-col space-y-4">
-            <li><a href="/" class="block hover:text-primary-600 transition-colors">Home</a></li>
-            <li><a href="/projetos" class="block hover:text-primary-600 transition-colors">Projetos</a></li>
-            <li><a href="#servicos" class="block hover:text-primary-600 transition-colors">Serviços</a></li>
-            <li><a href="#contato" class="block hover:text-primary-600 transition-colors">Contato</a></li>
+            <li>
+              <a href="/" class="block hover:text-primary-600 transition-colors"
+                >Home</a>
+            </li>
+            <li>
+              <a
+                href="/projetos"
+                class="block hover:text-primary-600 transition-colors"
+                >Projetos</a>
+            </li>
+            <li>
+              <a
+                href="#servicos"
+                class="block hover:text-primary-600 transition-colors"
+                >Serviços</a>
+            </li>
+            <li>
+              <a
+                href="#contato"
+                class="block hover:text-primary-600 transition-colors"
+                >Contato</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -62,15 +109,28 @@ const { contact } = siteSettings;
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-xl font-bold mb-4"><img src="/logo-footer.svg" alt="Cristiane David" /></h3>
+            <h3 class="text-xl font-bold mb-4">
+              <img src="/logo-footer.svg" alt="Cristiane David" />
+            </h3>
           </div>
           <div>
             <h4 class="font-semibold mb-4">Links</h4>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-              <li><a href="/projetos" class="hover:text-white transition-colors">Projetos</a></li>
-              <li><a href="/#servicos" class="hover:text-white transition-colors">Serviços</a></li>
-              <li><a href="/#contato" class="hover:text-white transition-colors">Contato</a></li>
+              <li>
+                <a href="/" class="hover:text-white transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="/projetos" class="hover:text-white transition-colors"
+                  >Projetos</a>
+              </li>
+              <li>
+                <a href="/#servicos" class="hover:text-white transition-colors"
+                  >Serviços</a>
+              </li>
+              <li>
+                <a href="/#contato" class="hover:text-white transition-colors"
+                  >Contato</a>
+              </li>
             </ul>
           </div>
           <div>
@@ -78,18 +138,22 @@ const { contact } = siteSettings;
             <p class="text-gray-400">{contact.email}</p>
           </div>
         </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Cristiane David. Todos os direitos reservados.</p>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; {new Date().getFullYear()} Cristiane David. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
 
     <script>
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      
-      mobileMenuBtn?.addEventListener('click', () => {
-        mobileMenu?.classList.toggle('hidden');
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("hidden");
       });
 
       // Netlify Identity for Decap CMS

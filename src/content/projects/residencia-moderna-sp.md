@@ -20,6 +20,7 @@ Este projeto residencial foi desenvolvido para uma família que buscava um ambie
 ## Conceito
 
 O conceito do projeto se baseia em:
+
 - Integração entre sala, cozinha e área gourmet
 - Uso de materiais naturais como madeira e pedras
 - Paleta de cores neutras com pontos de cor vibrantes

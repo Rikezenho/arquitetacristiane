@@ -29,19 +29,59 @@ collections:
             name: "social"
             widget: "object"
             fields:
-              - { label: "Instagram", name: "instagram", widget: "string", required: false }
-              - { label: "Facebook", name: "facebook", widget: "string", required: false }
-              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
-              - { label: "Pinterest", name: "pinterest", widget: "string", required: false }
+              - {
+                  label: "Instagram",
+                  name: "instagram",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Facebook",
+                  name: "facebook",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "LinkedIn",
+                  name: "linkedin",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Pinterest",
+                  name: "pinterest",
+                  widget: "string",
+                  required: false,
+                }
           - label: "Contato"
             name: "contact"
             widget: "object"
             fields:
-              - { label: "Imagem de fundo", name: "background", widget: "image", required: false }
+              - {
+                  label: "Imagem de fundo",
+                  name: "background",
+                  widget: "image",
+                  required: false,
+                }
               - { label: "Email", name: "email", widget: "string" }
-              - { label: "Telefone", name: "phone", widget: "string", required: false }
-              - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
-              - { label: "Formulário de orçamento", name: "quoteFormUrl", widget: "string", required: false }
+              - {
+                  label: "Telefone",
+                  name: "phone",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "WhatsApp",
+                  name: "whatsapp",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Formulário de orçamento",
+                  name: "quoteFormUrl",
+                  widget: "string",
+                  required: false,
+                }
 
   - name: "projects"
     label: "Projetos"
@@ -52,10 +92,26 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição", name: "description", widget: "text" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Categoria", name: "category", widget: "select", options: ["Residencial", "Comercial", "Corporativo", "Hospitality"] }
+      - {
+          label: "Categoria",
+          name: "category",
+          widget: "select",
+          options: ["Residencial", "Comercial", "Corporativo", "Hospitality"],
+        }
       - { label: "Imagem Principal", name: "image", widget: "image" }
-      - { label: "Destacar no Home", name: "featured", widget: "boolean", default: false }
-      - { label: "Galeria", name: "gallery", widget: "list", field: { label: "Imagem", name: "image", widget: "image" }, required: false }
+      - {
+          label: "Destacar no Home",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Galeria",
+          name: "gallery",
+          widget: "list",
+          field: { label: "Imagem", name: "image", widget: "image" },
+          required: false,
+        }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
   - name: "services"
@@ -66,6 +122,12 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição", name: "description", widget: "text" }
-      - { label: "Ícone", name: "icon", widget: "select", options: ["home", "building", "palette", "ruler", "lightbulb", "sofa"] }
+      - {
+          label: "Ícone",
+          name: "icon",
+          widget: "select",
+          options:
+            ["home", "building", "palette", "ruler", "lightbulb", "sofa"],
+        }
       - { label: "Ordem", name: "order", widget: "number", default: 1 }
       - { label: "Conteúdo", name: "body", widget: "markdown" }

@@ -1,10 +1,10 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
-  return projects.map(project => ({
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
     params: { slug: project.slug },
     props: { project },
   }));
@@ -14,11 +14,26 @@ const { project } = Astro.props;
 const { Content } = await project.render();
 ---
 
-<Layout title={`${project.data.title} | Cristiane David`} description={project.data.description}>
+<Layout
+  title={`${project.data.title} | Cristiane David`}
+  description={project.data.description}
+>
   <article class="container mx-auto px-4 py-16 max-w-4xl">
-    <a href="/projetos" class="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8">
-      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    <a
+      href="/projetos"
+      class="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8"
+    >
+      <svg
+        class="w-5 h-5 mr-2"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"></path>
       </svg>
       Voltar para Projetos
     </a>
@@ -27,50 +42,58 @@ const { Content } = await project.render();
       <h1 class="text-4xl md:text-5xl font-bold mb-4">{project.data.title}</h1>
       <div class="flex items-center gap-4 text-gray-600">
         <time datetime={project.data.date.toISOString()}>
-          {new Date(project.data.date).toLocaleDateString('pt-BR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
+          {
+            new Date(project.data.date).toLocaleDateString("pt-BR", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+          }
         </time>
-        {project.data.category && (
-          <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">
-            {project.data.category}
-          </span>
-        )}
+        {
+          project.data.category && (
+            <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">
+              {project.data.category}
+            </span>
+          )
+        }
       </div>
     </header>
 
-    {project.data.image && (
-      <div class="mb-12 rounded-lg overflow-hidden shadow-xl">
-        <img 
-          src={project.data.image} 
-          alt={project.data.title}
-          class="w-full h-auto"
-        />
-      </div>
-    )}
+    {
+      project.data.image && (
+        <div class="mb-12 rounded-lg overflow-hidden shadow-xl">
+          <img
+            src={project.data.image}
+            alt={project.data.title}
+            class="w-full h-auto"
+          />
+        </div>
+      )
+    }
 
     <div class="prose prose-lg max-w-none">
       <Content />
     </div>
 
-    {project.data.gallery && project.data.gallery.length > 0 && (
-      <section class="mt-12">
-        <h2 class="text-2xl font-bold mb-6">Galeria</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {project.data.gallery.map((image: string) => (
-            <div class="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src={image} 
-                alt="Imagem do projeto"
-                class="w-full h-auto"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-    )}
+    {
+      project.data.gallery && project.data.gallery.length > 0 && (
+        <section class="mt-12">
+          <h2 class="text-2xl font-bold mb-6">Galeria</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {project.data.gallery.map((image: string) => (
+              <div class="rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src={image}
+                  alt="Imagem do projeto"
+                  class="w-full h-auto"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
   </article>
 </Layout>
 
@@ -87,7 +110,8 @@ const { Content } = await project.render();
   .prose p {
     @apply mb-4 leading-relaxed;
   }
-  .prose ul, .prose ol {
+  .prose ul,
+  .prose ol {
     @apply mb-4 ml-6;
   }
   .prose li {

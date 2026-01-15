@@ -4,11 +4,15 @@ import siteSettings from "../content/settings/site.json";
 const { hero } = siteSettings;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <div 
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <div
     id="hero-bg"
     class="absolute inset-0 z-0 opacity-50"
-    style={hero.image ? `background-image: url('${hero.image}'); background-repeat: no-repeat; background-size: cover;` : ''}
+    style={hero.image
+      ? `background-image: url('${hero.image}'); background-repeat: no-repeat; background-size: cover;`
+      : ""}
   >
     <!-- Subtle white gradient overlay from bottom to top -->
     <div
@@ -75,8 +79,8 @@ const { hero } = siteSettings;
   </div>
 
   <script>
-    const heroBg = document.getElementById('hero-bg');
-    
+    const heroBg = document.getElementById("hero-bg");
+
     if (heroBg) {
       const handleScroll = () => {
         const scrolled = window.scrollY;
@@ -84,8 +88,8 @@ const { hero } = siteSettings;
         const yPos = scrolled * 0.3;
         heroBg.style.backgroundPosition = `center ${yPos}px`;
       };
-      
-      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      window.addEventListener("scroll", handleScroll, { passive: true });
     }
   </script>
 </section>
