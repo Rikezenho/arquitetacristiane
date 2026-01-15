@@ -4,22 +4,17 @@ import siteSettings from "../content/settings/site.json";
 const { hero } = siteSettings;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center">
-  <div class="absolute inset-0 z-0">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div 
+    id="hero-bg"
+    class="absolute inset-0 z-0 opacity-50"
+    style={hero.image ? `background-image: url('${hero.image}'); background-repeat: no-repeat; background-size: cover;` : ''}
+  >
     <!-- Subtle white gradient overlay from bottom to top -->
     <div
       class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"
     >
     </div>
-    {
-      hero.image && (
-        <img
-          src={hero.image}
-          alt="Hero background"
-          class="w-full h-full object-cover opacity-15"
-        />
-      )
-    }
   </div>
 
   <div class="container mx-auto px-4 py-20 relative z-20">
@@ -78,4 +73,19 @@ const { hero } = siteSettings;
         d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
     </svg>
   </div>
+
+<script>
+  const heroBg = document.getElementById('hero-bg');
+  
+  if (heroBg) {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      // Subtle parallax: move background vertically at 30% of scroll speed
+      const yPos = scrolled * 0.3;
+      heroBg.style.backgroundPosition = `center ${yPos}px`;
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  }
+</script>
 </section>
