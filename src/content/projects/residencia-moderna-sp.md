@@ -1,14 +1,16 @@
 ---
-title: "Residência Moderna em São Paulo"
-description: "Projeto de arquitetura de interiores para residência de 180m² com estilo contemporâneo e clean, priorizando a integração de ambientes e iluminação natural."
+title: Residência Moderna em São Paulo
+description: Projeto de arquitetura de interiores para residência de 180m² com
+  estilo contemporâneo e clean, priorizando a integração de ambientes e
+  iluminação natural.
 date: 2024-12-01
-category: "Residencial"
-image: "/images/uploads/projeto-residencia-moderna.jpg"
+category: Residencial
+image: https://blog.archtrends.com/wp-content/uploads/2022/10/casas-modernas-1200x900.jpg
 featured: true
 gallery:
-  - "/images/uploads/projeto-residencia-moderna-sala.jpg"
-  - "/images/uploads/projeto-residencia-moderna-cozinha.jpg"
-  - "/images/uploads/projeto-residencia-moderna-quarto.jpg"
+  - /images/uploads/projeto-residencia-moderna-sala.jpg
+  - /images/uploads/projeto-residencia-moderna-cozinha.jpg
+  - /images/uploads/projeto-residencia-moderna-quarto.jpg
 ---
 
 ## Sobre o Projeto

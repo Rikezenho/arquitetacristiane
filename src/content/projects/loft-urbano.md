@@ -1,9 +1,10 @@
 ---
-title: "Loft Urbano"
-description: "Reforma completa de loft de 60m² com conceito industrial e decoração minimalista, otimizando cada centímetro do espaço."
+title: Loft Urbano
+description: Reforma completa de loft de 60m² com conceito industrial e
+  decoração minimalista, otimizando cada centímetro do espaço.
 date: 2024-10-20
-category: "Residencial"
-image: "/images/uploads/projeto-loft.jpg"
+category: Residencial
+image: https://static.liderinteriores.com.br/wp-content/uploads/2016/01/Loft_Nova-York.jpg
 featured: true
 ---
 

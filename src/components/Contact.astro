@@ -5,8 +5,18 @@ const { social, contact } = siteSettings;
 const quoteFormUrl = contact.quoteFormUrl;
 ---
 
-<section id="contato" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
+<section id="contato" class="py-20 bg-white relative">
+  <div 
+    id="contact-bg"
+    class="absolute inset-0 z-0 opacity-5"
+    style={contact.background?.match('(jpg|jpeg|png|webp)') ? `background-image: url('${contact.background}'); background-repeat: repeat;` : ''}
+  >
+    <div
+        class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"
+      >
+    </div>
+  </div>
+  <div class="container mx-auto px-4 z-1 relative">
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-display mb-4 text-primary-700 mb-4">Entre em Contato</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">

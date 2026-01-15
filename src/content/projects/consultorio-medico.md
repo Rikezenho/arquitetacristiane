@@ -1,13 +1,15 @@
 ---
-title: "Consultório Médico"
-description: "Projeto de design de interiores para consultório médico focado em criar um ambiente acolhedor e profissional que transmite confiança aos pacientes."
+title: Consultório Médico
+description: Projeto de design de interiores para consultório médico focado em
+  criar um ambiente acolhedor e profissional que transmite confiança aos
+  pacientes.
 date: 2024-11-15
-category: "Comercial"
-image: "/images/uploads/projeto-consultorio.jpg"
+category: Comercial
+image: https://images.adsttc.com/media/images/50a5/3966/b3fc/4b26/3f00/0140/large_jpg/Foto_Archdaily_11.jpg?1414174886
 featured: true
 gallery:
-  - "/images/uploads/projeto-consultorio-recepcao.jpg"
-  - "/images/uploads/projeto-consultorio-consultorio.jpg"
+  - /images/uploads/projeto-consultorio-recepcao.jpg
+  - /images/uploads/projeto-consultorio-consultorio.jpg
 ---
 
 ## Sobre o Projeto

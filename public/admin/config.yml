@@ -37,6 +37,7 @@ collections:
             name: "contact"
             widget: "object"
             fields:
+              - { label: "Imagem de fundo", name: "background", widget: "image", required: false }
               - { label: "Email", name: "email", widget: "string" }
               - { label: "Telefone", name: "phone", widget: "string", required: false }
               - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
