@@ -1,11 +1,9 @@
 ---
-title: Consultório Médico
-description: Projeto de design de interiores para consultório médico focado em
-  criar um ambiente acolhedor e profissional que transmite confiança aos
-  pacientes.
+title: "Casa Cotia "
+description: "Projeto de design de interiores para sobrado em condomínio. "
 date: 2024-11-15
-category: Comercial
-image: https://images.adsttc.com/media/images/50a5/3966/b3fc/4b26/3f00/0140/large_jpg/Foto_Archdaily_11.jpg?1414174886
+category: Residencial
+image: /images/uploads/enscape_2026-02-27-20-00-02.png
 featured: true
 gallery:
   - /images/uploads/projeto-consultorio-recepcao.jpg
