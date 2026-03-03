@@ -2,6 +2,12 @@ backend:
   name: git-gateway
   branch: master
 
+# Global slug settings
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 local_backend: true
 
 media_folder: "public/images/uploads"
@@ -87,7 +93,7 @@ collections:
     label: "Projetos"
     folder: "src/content/projects"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.title}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição", name: "description", widget: "text" }
