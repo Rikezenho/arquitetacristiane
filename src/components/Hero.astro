@@ -9,9 +9,9 @@ const { hero } = siteSettings;
 >
   <div
     id="hero-bg"
-    class="absolute inset-0 z-0 opacity-50"
+    class="absolute inset-0 z-0"
     style={hero.image
-      ? `background-image: url('${hero.image}'); background-repeat: no-repeat; background-size: cover;`
+      ? `background-image: url('${hero.image}'); background-repeat: no-repeat; background-size: cover; opacity: ${(hero.backgroundOpacity || 100) / 100};`
       : ""}
   >
     <!-- Subtle white gradient overlay from bottom to top -->
