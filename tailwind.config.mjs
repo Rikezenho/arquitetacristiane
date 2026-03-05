@@ -52,7 +52,7 @@ export default {
           "Segoe UI Symbol",
           "Noto Color Emoji",
         ],
-        display: ["Gruppo", "cursive"],
+        display: ["Gruppo", "Quicksand", "sans-serif"]
       },
     },
   },
