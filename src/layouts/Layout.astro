@@ -34,7 +34,7 @@ const { contact } = siteSettings;
   </head>
   <body class="bg-white text-gray-900">
     <header class="fixed top-0 left-0 right-0 z-50 py-4">
-      <nav class="container mx-auto px-4 py-4">
+      <nav class="container mx-auto px-4 md:px-8 py-2 md:py-4">
         <div class="flex justify-end items-center">
           <ul class="hidden md:flex space-x-8">
             <li>
@@ -48,12 +48,12 @@ const { contact } = siteSettings;
             </li>
             <li>
               <a
-                href="#servicos"
+                href="/#servicos"
                 class="hover:text-primary-600 transition-colors">Serviços</a>
             </li>
             <li>
               <a
-                href="#contato"
+                href="/#contato"
                 class="hover:text-primary-600 transition-colors">Contato</a>
             </li>
           </ul>
@@ -86,13 +86,13 @@ const { contact } = siteSettings;
             </li>
             <li>
               <a
-                href="#servicos"
+                href="/#servicos"
                 class="block hover:text-primary-600 transition-colors"
                 >Serviços</a>
             </li>
             <li>
               <a
-                href="#contato"
+                href="/#contato"
                 class="block hover:text-primary-600 transition-colors"
                 >Contato</a>
             </li>
@@ -135,7 +135,7 @@ const { contact } = siteSettings;
           </div>
           <div>
             <h4 class="font-semibold mb-4">Contato</h4>
-            <p class="text-gray-400">{contact.email}</p>
+            <p class="text-gray-400 overflow-auto">{contact.email}</p>
           </div>
         </div>
         <div

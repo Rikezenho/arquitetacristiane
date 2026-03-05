@@ -18,25 +18,27 @@ const { Content } = await project.render();
   title={`${project.data.title} | Cristiane David`}
   description={project.data.description}
 >
-  <article class="container mx-auto px-4 py-16 max-w-4xl">
-    <a
-      href="/projetos"
-      class="inline-flex items-center text-primary-600 hover:text-primary-700 pt-5 mb-8"
-    >
-      <svg
-        class="w-5 h-5 mr-2"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+  <article class="container mx-auto px-4 py-20 max-w-4xl">
+    <div class="sm:pt-30">
+      <a
+        href="/projetos"
+        class="inline-flex items-center text-primary-600 hover:text-primary-700 py-2"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M15 19l-7-7 7-7"></path>
-      </svg>
-      Voltar para Projetos
-    </a>
+        <svg
+          class="w-5 h-5 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Voltar para Projetos
+      </a>
+    </div>
 
     <header class="mb-8">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">{project.data.title}</h1>
