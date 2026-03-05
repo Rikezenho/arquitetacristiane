@@ -9,6 +9,8 @@ on:
       - '**.png'
       - '**.webp'
       - '**.avif'
+  workflow_call:
+
 jobs:
   build:
     name: calibreapp/image-actions
