@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import featuredProjectsData from "../content/settings/featuredProjects.json";
 
 const allProjects = await getCollection("projects");
 const featuredProjects = allProjects
@@ -8,19 +9,21 @@ const featuredProjects = allProjects
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   )
   .slice(0, 3);
+
+const { title, description } = featuredProjectsData;
 ---
 
 <section class="py-20 px-4">
   <div class="text-center mb-12">
     <h2 class="text-4xl md:text-5xl mb-4 text-tertiary-700">
-      Projetos em Destaque
+      {title}
     </h2>
     <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-      Conheça alguns dos nossos trabalhos mais recentes e inspiradores
+      {description}
     </p>
   </div>
 
-  <div class="max-w-2xl mx-auto flex flex-col gap-4 mb-12">
+  <div class="max-w-7xl mx-auto flex gap-4 mb-12">
     {
       featuredProjects.map((project) => (
         <article class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">

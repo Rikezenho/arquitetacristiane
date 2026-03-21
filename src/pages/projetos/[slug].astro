@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const parsedContent = marked.parse(project.data.content);
 ---
 
 <Layout
@@ -75,7 +75,7 @@ const { Content } = await project.render();
     }
 
     <div class="prose prose-lg max-w-none">
-      <Content />
+      <div class="flex flex-col gap-5" set:html={parsedContent} />
     </div>
 
     {
