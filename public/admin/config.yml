@@ -54,6 +54,7 @@ collections:
         file: "src/content/settings/about.json"
         fields:
           - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (texto que aparece no Google)", name: "description", widget: "text" }
           - { label: "Conteúdo", name: "content", widget: "markdown" }
           - { label: "Foto", name: "photo", widget: "image" }
 
