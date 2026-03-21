@@ -49,6 +49,20 @@ collections:
               - { label: "Telefone", name: "phone", widget: "string", required: false }
               - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
               - { label: "Formulário de orçamento", name: "quoteFormUrl", widget: "string", required: false }
+      - label: "Serviços"
+        name: "servicesHome"
+        file: "src/content/settings/services.json"
+        fields:
+          - {
+              label: "Título",
+              name: "title",
+              widget: "string",
+            }
+          - {
+              label: "Descrição",
+              name: "description",
+              widget: "text",
+            }
       - label: "Projetos em destaque"
         name: "featuredProjects"
         file: "src/content/settings/featuredProjects.json"

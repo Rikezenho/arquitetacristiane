@@ -36,6 +36,14 @@ const services = defineCollection({
   }),
 });
 
+const servicesHome = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
 const about = defineCollection({
   type: "content",
   schema: z.object({
@@ -50,5 +58,6 @@ export const collections = {
   featuredProjects,
   projects,
   services,
+  servicesHome,
   about,
 };

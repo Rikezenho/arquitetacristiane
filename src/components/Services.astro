@@ -1,17 +1,19 @@
 ---
 import { getCollection } from "astro:content";
+import servicesData from "../content/settings/services.json";
 
 const allServices = await getCollection("services");
 const sortedServices = allServices.sort((a, b) => a.data.order - b.data.order);
+
+const { title, description } = servicesData;
 ---
 
 <section id="servicos" class="bg-gray-50 py-20">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl text-tertiary-700 mb-4">Serviços</h2>
+      <h2 class="text-4xl md:text-5xl text-tertiary-700 mb-4">{title}</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Soluções completas em arquitetura de interiores para transformar seus
-        espaços
+        {description}
       </p>
     </div>
 
