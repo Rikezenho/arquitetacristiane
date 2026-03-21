@@ -5,31 +5,30 @@ const { social, contact } = siteSettings;
 const quoteFormUrl = contact.quoteFormUrl;
 ---
 
-<section id="contato" class="py-20 bg-white relative">
+<section id="contato" class="py-20 bg-white relative break-words sm:px-20">
   <div
     id="contact-bg"
-    class="absolute inset-0 z-0 opacity-5"
+    class="absolute inset-0 z-0 opacity-10"
     style={contact.background?.match("(jpg|jpeg|png|webp)")
       ? `background-image: url('${contact.background}'); background-repeat: repeat;`
       : ""}
   >
     <div
-      class="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"
+      class="absolute inset-0 pointer-events-none bg-gradient-to-t from-white/90 to-transparent"
     >
     </div>
   </div>
-  <div class="container mx-auto px-4 z-1 relative">
-    <div class="text-center mb-12">
+  <div class="container mx-auto p-10 z-10 relative bg-primary-50 rounded-lg">
+    <div class="text-left mb-6">
       <h2 class="text-4xl md:text-5xl font-display mb-4 text-primary-700 mb-4">
         Entre em Contato
       </h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Vamos conversar sobre o seu projeto e transformar seus sonhos em
-        realidade
+      <p class="text-xl text-gray-600 max-w-lg">
+        Vamos conversar sobre o seu projeto e transformar seus sonhos em realidade?
       </p>
     </div>
 
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="max-w-3xl text-left">
       <div class="mb-8">
         <a
           href={quoteFormUrl}
@@ -76,8 +75,7 @@ const quoteFormUrl = contact.quoteFormUrl;
             social.linkedin ||
             social.pinterest) && (
             <div>
-              <p class="font-semibold">Redes Sociais</p>
-              <div class="flex items-center justify-center gap-4 mt-3">
+              <div class="flex items-center gap-4 mt-3">
                 {social.instagram && (
                   <a
                     href={social.instagram}
