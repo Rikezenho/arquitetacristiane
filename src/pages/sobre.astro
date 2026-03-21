@@ -14,10 +14,10 @@ const contentHtml = marked.parse(about.content);
     <h1 class="text-4xl md:text-5xl text-left mb-10 text-primary-600">
       {about.title}
     </h1>
-    <article class="flex flex-col md:flex-row gap-4">
+    <article class="flex flex-col lg:flex-row gap-4 lg:gap-10">
       {
         about.photo && (
-          <div class="about-photo min-w-[600px] max-w-sm">
+          <div class="about-photo lg:min-w-[400px] xl:min-w-[600px] max-w-sm">
             <img src={about.photo} alt={about.title} class="mb-4" />
           </div>
         )
