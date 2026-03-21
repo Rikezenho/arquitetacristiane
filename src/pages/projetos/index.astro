@@ -1,21 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import projectsPageData from "../../content/settings/projectsPage.json";
 
 const allProjects = await getCollection("projects");
 const sortedProjects = allProjects.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
+
+const { title, description } = projectsPageData;
 ---
 
 <Layout title="Projetos | Cristiane David">
   <section class="container mx-auto px-4 py-20 relative z-20">
     <h1 class="text-4xl md:text-5xl text-left mb-4 text-primary-600">
-      Projetos
+      {title}
     </h1>
     <p class="text-left text-gray-600 mb-12 mx-auto">
-      Explore nossa coleção de projetos de arquitetura de interiores, cada um
-      criado com dedicação e atenção aos detalhes.
+      {description}
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">

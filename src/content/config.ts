@@ -62,6 +62,14 @@ const contact = defineCollection({
   }),
 });
 
+const projectsPage = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   featuredProjects,
   projects,
@@ -69,4 +77,5 @@ export const collections = {
   servicesHome,
   about,
   contact,
+  projectsPage,
 };
