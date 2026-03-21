@@ -36,59 +36,26 @@ collections:
             name: "social"
             widget: "object"
             fields:
-              - {
-                  label: "Instagram",
-                  name: "instagram",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Facebook",
-                  name: "facebook",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "LinkedIn",
-                  name: "linkedin",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Pinterest",
-                  name: "pinterest",
-                  widget: "string",
-                  required: false,
-                }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "Pinterest", name: "pinterest", widget: "string", required: false }
           - label: "Contato"
             name: "contact"
             widget: "object"
             fields:
-              - {
-                  label: "Imagem de fundo",
-                  name: "background",
-                  widget: "image",
-                  required: false,
-                }
+              - { label: "Imagem de fundo", name: "background", widget: "image", required: false }
               - { label: "Email", name: "email", widget: "string" }
-              - {
-                  label: "Telefone",
-                  name: "phone",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "WhatsApp",
-                  name: "whatsapp",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Formulário de orçamento",
-                  name: "quoteFormUrl",
-                  widget: "string",
-                  required: false,
-                }
+              - { label: "Telefone", name: "phone", widget: "string", required: false }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
+              - { label: "Formulário de orçamento", name: "quoteFormUrl", widget: "string", required: false }
+      - label: "Sobre"
+        name: "about"
+        file: "src/content/settings/about.json"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "markdown" }
+          - { label: "Foto", name: "photo", widget: "image" }
 
   - name: "projects"
     label: "Projetos"

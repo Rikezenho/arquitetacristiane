@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import about from "../content/settings/about.json";
+---
+
+<Layout title={about.title + " | Cristiane David"}>
+  <section class="container mx-auto px-4 py-20 relative z-20 max-w-6xl">
+    <h1 class="text-4xl md:text-5xl text-left mb-4 text-primary-600">
+      {about.title}
+    </h1>
+    <article class="flex gap-8">
+      <div class="prose max-w-none text-gray-700">
+        <p>{about.content}</p>
+      </div>
+      {
+        about.photo && (
+          <div class="about-photo min-w-[400px] max-w-sm">
+            <img src={about.photo} alt={about.title} class="mb-4" />
+          </div>
+        )
+      }
+    </article>
+  </section>
+</Layout>

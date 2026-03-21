@@ -28,7 +28,17 @@ const services = defineCollection({
   }),
 });
 
+const about = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    content: z.string(),
+    photo: z.string(),
+  }),
+});
+
 export const collections = {
   projects,
   services,
+  about,
 };
