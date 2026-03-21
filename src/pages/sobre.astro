@@ -10,22 +10,22 @@ const contentHtml = marked.parse(about.content);
   title={about.title + " | Cristiane David"}
   description={about.description}
 >
-  <section class="container mx-auto px-4 py-20 relative z-20 max-w-6xl">
-    <h1 class="text-4xl md:text-5xl text-left mb-4 text-primary-600">
+  <section class="container mx-auto px-4 py-20 relative z-20">
+    <h1 class="text-4xl md:text-5xl text-left mb-10 text-primary-600">
       {about.title}
     </h1>
-    <article class="flex flex-col md:flex-row gap-12">
-      <div
-        class="prose max-w-none text-gray-700 flex flex-col gap-6 text-balanc"
-        set:html={contentHtml}
-      />
+    <article class="flex flex-col md:flex-row gap-4">
       {
         about.photo && (
-          <div class="about-photo min-w-[400px] max-w-sm">
+          <div class="about-photo min-w-[600px] max-w-sm">
             <img src={about.photo} alt={about.title} class="mb-4" />
           </div>
         )
       }
+      <div
+        class="prose max-w-none text-gray-700 flex flex-col gap-6 text-balanc"
+        set:html={contentHtml}
+      />
     </article>
   </section>
 </Layout>
