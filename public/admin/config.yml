@@ -49,7 +49,8 @@ collections:
               - { label: "Telefone", name: "phone", widget: "string", required: false }
               - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
               - { label: "Formulário de orçamento", name: "quoteFormUrl", widget: "string", required: false }
-      - label: "Serviços"
+
+      - label: "Serviços (título e descrição da seção de serviços)"
         name: "servicesHome"
         file: "src/content/settings/services.json"
         fields:
@@ -63,9 +64,23 @@ collections:
               name: "description",
               widget: "text",
             }
-      - label: "Projetos em destaque"
+      - label: "Projetos em destaque (título e descrição da seção de projetos em destaque)"
         name: "featuredProjects"
         file: "src/content/settings/featuredProjects.json"
+        fields:
+          - {
+              label: "Título",
+              name: "title",
+              widget: "string",
+            }
+          - {
+              label: "Descrição",
+              name: "description",
+              widget: "text",
+            }
+      - label: "Contato (título e descrição da seção de contato)"
+        name: "contact"
+        file: "src/content/settings/contact.json"
         fields:
           - {
               label: "Título",
