@@ -1,17 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import { marked } from "marked";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((project) => ({
     params: { slug: project.slug },
-    props: { project },
+    props: { project, body: marked.parse(project.body) },
   }));
 }
 
-const { project } = Astro.props;
-const parsedContent = marked.parse(project.data.content);
+const { project, body } = Astro.props;
 ---
 
 <Layout
@@ -75,7 +75,7 @@ const parsedContent = marked.parse(project.data.content);
     }
 
     <div class="prose prose-lg max-w-none">
-      <div class="flex flex-col gap-5" set:html={parsedContent} />
+      <div class="flex flex-col gap-5" set:html={body} />
     </div>
 
     {

@@ -23,7 +23,9 @@ const { title, description } = featuredProjectsData;
     </p>
   </div>
 
-  <div class="max-w-7xl mx-auto flex gap-4 mb-12">
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-12"
+  >
     {
       featuredProjects.map((project) => (
         <article class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
@@ -33,7 +35,7 @@ const { title, description } = featuredProjectsData;
                 <img
                   src={project.data.image}
                   alt={project.data.title}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover group-hover:scale-[110%] transition-transform duration-[300ms] ease-in-out"
                 />
               )}
             </div>
