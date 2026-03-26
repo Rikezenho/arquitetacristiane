@@ -1,5 +1,5 @@
 ---
-title: "Casa Cotia"
+title: Apartamento LR
 description: "Projeto de design de interiores para sobrado em condomínio. "
 date: 2024-11-15
 category: Residencial
