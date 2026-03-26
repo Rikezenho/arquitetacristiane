@@ -1,13 +1,16 @@
 ---
 title: Apartamento LR
-description: "Projeto de design de interiores para sobrado em condomínio. "
+description: "Projeto de arquitetura de interiores para apartamento de 37m² "
 date: 2024-11-15
 category: Residencial
-image: /images/uploads/enscape_2026-02-27-20-00-02.png
+image: /images/uploads/c.d_p2-3.jpg
 featured: true
 gallery:
-  - /images/uploads/projeto-consultorio-recepcao.jpg
-  - /images/uploads/projeto-consultorio-consultorio.jpg
+  - /images/uploads/c.d_p2-3.jpg
+  - /images/uploads/c.d_p2-4.jpg
+  - /images/uploads/c.d_p2-2-_folha-tripla.jpg
+  - /images/uploads/c.d_p2-3.jpg
+  - /images/uploads/c.d_p2-4.jpg
 ---
 
 ## Sobre o Projeto
