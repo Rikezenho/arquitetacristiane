@@ -9,6 +9,7 @@ gallery:
   - /images/uploads/c.d_p2-4.jpg
   - /images/uploads/c.d_p2-2-_folha-tripla.jpg
   - /images/uploads/c.d_p2-1.jpg
+  - /images/uploads/c.d_p2-3.jpg
 ---
 
 ## Sobre o Projeto
