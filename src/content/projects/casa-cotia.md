@@ -6,9 +6,9 @@ category: Residencial
 image: /images/uploads/c.d_p2-3.jpg
 featured: true
 gallery:
-  - /images/uploads/c.d_p2-3.jpg
   - /images/uploads/c.d_p2-4.jpg
   - /images/uploads/c.d_p2-2-_folha-tripla.jpg
+  - /images/uploads/c.d_p2-1.jpg
 ---
 
 ## Sobre o Projeto
