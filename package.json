@@ -7,11 +7,14 @@
     "start-server": "npx decap-server",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro preview",
+    "preview": "yarn run build && wrangler dev",
     "astro": "astro",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "generate-types": "wrangler types",
+    "deploy": "yarn run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.7",
     "astro": "^6.1.4",
     "marked": "^18.0.0",
     "tailwindcss": "^4.2.2"
@@ -21,7 +24,11 @@
     "@tailwindcss/vite": "^4.2.2",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "wrangler": "^4.81.0"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.13.0",
+  "overrides": {
+    "vite": "^7"
+  }
 }
