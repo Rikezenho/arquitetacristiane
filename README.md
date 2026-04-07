@@ -92,7 +92,7 @@ Para acessar localmente, rode `npx decap-server` na pasta raiz junto com o `npm 
 ## 🔄 Workflow de Atualização de Conteúdo
 
 1. Acesse o CMS em `/admin/`
-2. Faça login com Netlify Identity
+2. Faça login com Github
 3. Edite/Adicione conteúdo
 4. Salve as alterações (commit automático no GitHub)
 5. O deploy é acionado automaticamente
