@@ -9,6 +9,6 @@ export default defineConfig({
   },
 
   site: "https://cristianedavid.com",
-  output: "static",
+  output: "server",
   adapter: cloudflare(),
 });
