@@ -1,25 +1,22 @@
-import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 
 const featuredProjects = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "featuredProjects.json", base: "./src/content/settings" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-  })
+  }),
 });
 
 const projects = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    category: z.enum([
-      "Residencial",
-      "Comercial",
-      "Corporativo",
-      "Hospitality",
-    ]),
+    category: z.enum(["Residencial", "Comercial", "Corporativo", "Hospitality"]),
     image: z.string(),
     featured: z.boolean().default(false),
     gallery: z.array(z.string()).optional(),
@@ -27,7 +24,7 @@ const projects = defineCollection({
 });
 
 const services = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/services" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -37,7 +34,7 @@ const services = defineCollection({
 });
 
 const servicesHome = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "services.json", base: "./src/content/settings" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -45,7 +42,7 @@ const servicesHome = defineCollection({
 });
 
 const about = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "about.json", base: "./src/content/settings" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -55,7 +52,7 @@ const about = defineCollection({
 });
 
 const contact = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "contact.json", base: "./src/content/settings" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -63,7 +60,7 @@ const contact = defineCollection({
 });
 
 const projectsPage = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "projectsPage.json", base: "./src/content/settings" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
