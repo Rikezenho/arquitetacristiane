@@ -1,9 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getEntryBySlug, render } from "astro:content";
+import { getEntry, render } from "astro:content";
 
 const { slug } = Astro.params;
-const project = await getEntryBySlug("projects", slug);
+const project = await getEntry("projects", slug);
 
 if (!project) {
   return Astro.redirect("/projetos");
