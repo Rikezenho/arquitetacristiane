@@ -16,8 +16,8 @@ const { Content } = await render(project);
   title={`${project.data.title} | Cristiane David`}
   description={project.data.description}
 >
-  <article class="container mx-auto px-4 py-20 max-w-4xl">
-    <div class="sm:pt-30">
+  <article class="px-4 py-20 md:py-0">
+    <div class="mx-auto max-w-4xl sm:pt-30">
       <a
         href="/projetos"
         class="inline-flex items-center text-primary-600 hover:text-primary-700 py-2"
@@ -38,7 +38,7 @@ const { Content } = await render(project);
       </a>
     </div>
 
-    <header class="mb-8">
+    <header class="mx-auto max-w-4xl mb-8">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">{project.data.title}</h1>
       <div class="flex items-center gap-4 text-gray-600">
         <time datetime={project.data.date.toISOString()}>
@@ -62,7 +62,7 @@ const { Content } = await render(project);
 
     {
       project.data.image && (
-        <div class="mb-12 rounded-lg overflow-hidden shadow-xl">
+        <div class="mx-auto max-w-4xl mb-12 rounded-lg overflow-hidden shadow-xl">
           <img
             src={project.data.image}
             alt={project.data.title}
@@ -72,21 +72,21 @@ const { Content } = await render(project);
       )
     }
 
-    <div class="prose prose-lg max-w-none flex flex-col gap-5">
+    <div class="mx-auto max-w-4xl prose prose-lg flex flex-col gap-5">
       <Content />
     </div>
 
     {
       project.data.gallery && project.data.gallery.length > 0 && (
-        <section class="mt-12">
-          <h2 class="text-2xl font-bold mb-6">Galeria</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section class="mt-12 mb-10">
+          <h2 class="mx-auto max-w-4xl text-center text-2xl font-bold mb-6">Galeria</h2>
+          <div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-4">
             {project.data.gallery.map((image: string) => (
-              <div class="rounded-lg overflow-hidden shadow-lg">
+              <div class="overflow-hidden">
                 <img
                   src={image}
                   alt="Imagem do projeto"
-                  class="w-full h-auto"
+                  class="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
             ))}
