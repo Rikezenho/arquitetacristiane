@@ -8,5 +8,6 @@ featured: false
 gallery:
   - /images/uploads/nicho-aconchegante-com-mesa-e-cadeira-terracota-1-.png
   - /images/uploads/quarto-compacto-com-cama-e-escritorio-integrados.png
+  - /images/uploads/sala-de-estar-com-rodape-em-porcelanico-bege-copiar.png
 ---
 Projeto de marcenaria e decoração para apartamento completo.
